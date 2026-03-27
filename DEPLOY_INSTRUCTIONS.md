@@ -98,18 +98,33 @@ The Helm Bridge connects your devices to the Helm dashboard.
 
 ---
 
-## Step 4: Install and Configure Helm Supervisor
+## Step 4: Get Your Supervisor API Key
+
+Before configuring the Helm Supervisor add-on, you need to generate an API key in the Helm dashboard. This key is how your Home Assistant instance proves its identity when sending monitoring data.
+
+1. Open your Helm dashboard and log in:
+   [https://helm-by-nautilink.replit.app/supervisor](https://helm-by-nautilink.replit.app/supervisor)
+2. Click **Register Instance** — a green banner will appear at the top of the page
+3. Click the **eye icon** to reveal your full API key, then click **Copy**
+4. Keep this key handy — you'll paste it into the add-on configuration next
+
+> **Already registered?** If you've registered before but lost the key, click the **Show Key** button (eye icon) next to your instance to retrieve the full key at any time. If your key was compromised, use the **Regenerate Key** button to issue a fresh one and invalidate the old one.
+
+---
+
+## Step 5: Install and Configure Helm Supervisor
 
 The Helm Supervisor sends monitoring data (logs, metrics, device states) to the Helm dashboard.
 
 1. Find **Helm Supervisor** in the add-on store and click **Install**
-2. Go to the **Configuration** tab and set:
+2. Go to the **Configuration** tab and fill in:
    - `helm_url`: `https://helm-by-nautilink.replit.app`
-   - `api_key`: Get this from the Helm dashboard under **Helm Supervisor** → **Register Instance**
+   - `api_key`: paste the key you copied in Step 4
    - `sync_interval`: `60` (seconds between syncs, range 10–600)
-   - Leave the other toggles enabled
+   - Leave `collect_device_states`, `collect_performance_metrics`, and `collect_addon_status` enabled
 3. Click **Save**
 4. Go to the **Info** tab and click **Start**
+5. After ~60 seconds, your HA metrics, logs, and device states will begin appearing in the Helm Supervisor dashboard
 
 ---
 
@@ -133,7 +148,8 @@ The Helm Supervisor sends monitoring data (logs, metrics, device states) to the 
 ### Supervisor not syncing
 - Verify both `helm_url` and `api_key` are set in the Configuration tab
 - Check add-on logs for "No Helm URL or API key" warnings
-- Re-register the instance in Helm to get a fresh API key
+- Use the **Show Key** button in the Helm Supervisor dashboard to confirm the key matches
+- Click **Regenerate Key** in the Helm dashboard and update the add-on config with the new key
 
 ---
 
