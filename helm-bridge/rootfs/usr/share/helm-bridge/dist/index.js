@@ -5372,7 +5372,6 @@ var WebServer = class {
       }
     });
     this.app.use("/api", api);
-    'const publicDir = path3.join(__dirname, "../public");
     const publicDir = path3.join(_pathDirname(_fileURLToPath(import.meta.url)), "../public");
       this.app.use(express.static(publicDir));
     const fs3 = __require("fs");
