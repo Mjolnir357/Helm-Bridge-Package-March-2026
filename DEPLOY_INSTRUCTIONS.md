@@ -47,7 +47,7 @@ Your GitHub repository needs the exact folder structure shown here:
 **How to upload:**
 
 1. Download this `helm-bridge-deploy` folder to your computer (or extract the zip)
-2. Open your GitHub repository: `https://github.com/Mjolnir357/helm-bridge-addon`
+2. Open your GitHub repository: `https://github.com/Mjolnir357/Helm-Bridge-Package-March-2026`
 3. Upload **all files from inside this folder** to the **root** of the repository
    - `repository.yaml` goes at the repo root
    - The `helm-bridge/` folder goes at the repo root
@@ -65,8 +65,7 @@ Your GitHub repository needs the exact folder structure shown here:
 3. Click the three-dot menu (⋮) in the top right corner
 4. Select **Repositories**
 5. Add this URL:
-   ```
-   https://github.com/Mjolnir357/helm-bridge-addon
+   ``` https://github.com/Mjolnir357/Helm-Bridge-Package-March-2026/tree/main
    ```
 6. Click **Add**, then **Close**
 7. Refresh the page — both add-ons will now appear in the store
