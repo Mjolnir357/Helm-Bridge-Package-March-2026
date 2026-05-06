@@ -2,7 +2,7 @@ name: "Helm Supervisor"
 description: "Monitoring, logging, and diagnostics collector for Helm Smart Home Dashboard"
 version: "1.0.3"
 slug: "helm_supervisor"
-url: "https://github.com/Mjolnir357/helm-bridge-addon"
+url: "https://github.com/Mjolnir357/Helm-Bridge-Package-March-2026/tree/main/helm_supervisor"
 arch:
   - aarch64
   - amd64
